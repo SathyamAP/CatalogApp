@@ -1,0 +1,178 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	color: #3c332b;
+	line-height: 60px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 24px;
+	color: #51453B;
+	line-height: 29px;
+}
+
+h3 {
+	font-size: 16px;
+	color: #4c4036;
+	line-height: 23px;
+}
+ p {
+ 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ 	font-weight: 400;
+ }
+
+ strong {
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ }
+
+ a {
+ 	font-size: 14px;
+ 	color: #000000ad;
+ 	line-height: 17px;
+ }
+
+ hr{
+	border-top: 1px solid #3333336b;
+ }
+ 
+body{
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	background-color: #91ad74
+}
+
+.header-top{
+	background-color: #77a93d;
+	text-align: center;
+}
+
+.login-area{
+	padding-right:10px;
+	padding-left:2x;
+	margin-bottom:2px;
+	margin-top:20px;
+	text-align: left;
+}
+.content-login{
+	background-color: #bce68a;
+	box-shadow: 0 0 9px 1px black;
+	margin:10px;
+	padding-top: 20px;
+	padding-bottom: 2px;
+	text-align:center;
+}
+
+.content-body{
+	background-color: #bce68a;
+	box-shadow: 0 0 9px 1px black;
+	margin:4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+ 
+.btn {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	text-align: center;
+	margin: 2px;
+	margin-bottom:4px;
+	box-shadow: 0 0 9px 1px black;
+	border-width: 2px;
+	background-color:#76a576;
+	display: block;
+
+}
+
+.btn.delete {
+	padding-left:2px;
+	padding-right:2px;
+}
+
+.btn.edit {
+	padding-right:10px;
+	padding-left:10x;
+}
+
+.btn.login {
+	margin-top:20px;
+	padding-right:10px;
+	padding-left:2x;
+}
+
+.btn.logout {
+	margin-top:4px;
+	padding-right:10px;
+	padding-left:2x;
+}
+
+.btn.new-item {
+	padding-right:10px;
+	padding-left:10x;
+	margin-bottom:2px;
+	margin-top:10px;
+}
+
+.btn.add-item-cancel{
+	padding-right:10px;
+	padding-left:10x;
+	margin-bottom:12px;
+	margin-top:10px;
+}
+
+.btn.add-item-create{
+	padding-right:10px;
+	padding-left:10x;
+	margin-bottom:12px;
+	margin-top:10px;
+}
+
+.btn:hover {
+	border-color: #9FB80A;
+}
+
+.border-right {
+  border-right: 2px solid #3333336b;
+}
+
+.btn.delete:hover {
+	border-color: #aaaaaa;
+	color: red;
+}
+
+.flash {
+	width:100%;
+	text-decoration: none;
+	color: #3e3a39;
+	text-align: center;
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+}
+
+.user_img{
+	width: 60px;
+	height: 60px;
+	margin:15px; 
+	border-radius: 30px; 
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+}

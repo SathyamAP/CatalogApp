@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+	<div class="col-md-10 content-body ">
+		<div class="col-md-3 border-right">
+			{% if categories !=[] %}
+
+			<h2>Categories</h2>
+			<ul>
+			{% for c in categories %}
+				<li><a href = {{url_for('getCategory', category_name = c.name) }}>{{c.name }}</a></li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+		</div>
+		
+		<div class="col-md-7">
+			<div class="col-md-10">
+				{% if items !=[] %}
+					<h2>Latest Books</h2>
+					<ul>
+					{% for i in items %}
+							<li><a href = {{url_for('getItem', category_name = i.category_name, item_name= i.name) }}>{{i.name }}</a></li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+			{% if user_loggedin %}
+				<div class="col-md-2" >
+						<a href = {{url_for('addItem')}}>
+							<button class="btn new-item hover">Add new book</button>
+						</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+	
+{% endblock %}

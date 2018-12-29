@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+	<div class="col-md-10 content-body ">
+	<div class="col-md-1"></div>
+		
+		<div class="col-md-10">
+			<h2>Are you sure you want to delete <i>{{item.name}}?</i></h2>
+			<form action="{{ url_for('deleteItem', item_name = item.name)}}" method = 'post'>
+				<div class="col-md-1" box-sizing="border-box">
+					<button type="submit" class="btn hover" id="submit" type="submit">Delete</button>
+				</div>
+				<div class="col-md-1" box-sizing="border-box">
+					<a href = {{url_for('getItem', category_name= item.category_name, item_name=item.name)}}>
+						<button class="btn hover" type="button">Cancel</button>
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+{% endblock %}

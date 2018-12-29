@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+	<div class="col-md-10 content-body ">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+
+			<form action="{{ url_for('editItem', item_name = item.name)}}" method = "post">
+				<div class="form-group">
+					</br>
+					<label for="name">Name of the Book:</label>
+					<input type ="text" maxlength="500" class="form-control" name="name" value= "{{item.name}}">
+					</br>
+					<label for="description">Description:</label>
+					<textarea class="form-control" maxlength="1500" rows="4" name="description">{{item.description}}</textarea>
+					</br>
+					<label for="category">Category:</label>
+					<select class="option" name="category">
+					{% for cat in categories %}
+						<option value="{{ cat.name }}" {% if cat.name == item.category_name %} SELECTED{% endif %}>{{ cat.name }}</option>
+					{% endfor %}
+					</select>
+					</br>
+					<div class="col-md-1">
+						<button type="submit" class="btn add-item-create hover" id="submit" type="submit">Edit</button>
+					</div>
+					<div class="col-md-1">
+						<a href = {{url_for('getItem', category_name= item.category_name, item_name=item.name)}}>
+							<button class="btn add-item-cancel hover" type="button">Cancel</button>
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+{% endblock %}
+
+
+
+

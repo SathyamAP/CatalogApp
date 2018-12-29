@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+		<div class="row header-top">
+			<div class="row ">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-6">
+					<a href = {{url_for('getCatalog')}}><h1>Books Catalog</h1></a>
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						<div class="row flash">
+								<ul>
+								{% for message in messages %}
+									<li> {{ message }} </li>
+								{% endfor %}
+								</ul>
+						</div>
+					{% endif %}
+				{% endwith %}
+				</div>
+				{% if user_loggedin %}
+					<div class="col-md-3 login-area">
+						<div class="col-md-3">					
+							<img src="{{picture}}" class="user_img">
+						</div>	
+						<div class="col-md-9"><h3><i>Hello {{user_name}}!!</i></h3>
+							<a href = {{url_for('gdisconnect')}}>
+								<button class="btn hover logout">Logout</button>
+							</a>
+						</div>
+					</div>
+				{% else %}
+					<div class="col-md-1"></div>
+					<div class="col-md-3 login-area">
+						<a href = "{{url_for('showLogin')}}">
+							<button class="btn hove login">Login</button>
+						</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+		
+		<div class="row" >
+			<div class="col-md-1"></div>
+			{% block content %}
+			{% endblock %}
+			<div class="col-md-1"></div>
+		</div>
+
+
+
+
+		
+		
+		
+	</body>
+</html>

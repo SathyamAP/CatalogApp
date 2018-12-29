@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block content %}
+	<div class="col-md-10 content-body ">
+		<div class="col-md-1">	
+		</div>
+		<div class="col-md-8">	
+			<h2>{{item.name}}</h2>
+			<p><i>Category: {{item.category_name}}</i></p>
+			<p>{{item.description}}</p>
+			<p><i>Added by: {{item.created_user.name}}</i></p>
+			{% if user_loggedin %}
+			<div class="col-md-1">
+				<a href = {{url_for('editItem', item_name=item.name)}}>
+					<button class="btn edit hover">Edit</button>
+				</a>
+			</div>
+			<div class="col-md-1">
+				<a href = {{url_for('deleteItem', item_name=item.name)}}>
+					<button class="btn hover">Delete</button>
+				</a>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	
+{% endblock %}
